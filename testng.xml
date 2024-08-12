@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="QKart Test Suite">
+
+    <listeners>
+        <listener class-name="com.qkart.listeners.AnnotationTransformer"></listener>
+        <listener class-name="com.qkart.listeners.TestListeners"></listener>
+    </listeners>
+
+    <test name="Qkart Test" parallel="true" thread-count="3">
+
+        <classes>
+            <class name="com.qkart.AddToCartTest">
+                <methods>
+                    <include name="addToCartWithoutLoginTest"/>
+                    <include name="addToCartAfterLoginTest"/>
+                    <include name="selectSizeForTheProductTest"/>
+                    <include name="addOutOfStocksTcCartTest"/>
+                </methods>
+            </class>
+            <class name="com.qkart.LoginTest">
+                <methods>
+                    <include name="validLoginTest"/>
+                    <include name="invalidUsernameLoginTest"/>
+                    <include name="invalidPasswordLoginTest"/>
+                    <include name="emptyValueInLoginTextBoxes"/>
+                    <include name="backToExploreTest"/>
+                </methods>
+            </class>
+        </classes>
+
+    </test>
+</suite>

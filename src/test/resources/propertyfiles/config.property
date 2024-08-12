@@ -1,0 +1,17 @@
+# web application url
+url = https://crio-qkart-frontend-qa.vercel.app/
+
+#usercrenditials
+username = testuser
+password = testuser
+
+#Browser
+#supported browsers ---> chrome, firefox
+browser = firefox
+
+#Rerun the failed tests
+#yes ---> To rerun the failed test cases
+#no  ---> Not to rerun the failed test cases
+rerunfailedtest = no
+
+log4jenabled = no
